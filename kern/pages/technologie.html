@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technologie — KERN</title>
+  <meta name="description" content="Thorium-Flüssigsalzreaktoren und Kompakt-Fusion: die Technologien von KERN im Detail." />
+  <link rel="stylesheet" href="/Webseite/css/style.css" />
+</head>
+<body>
+
+  <nav id="main-nav">
+    <a href="/Webseite/index.html" class="nav-logo">KER<span>N</span></a>
+    <ul class="nav-links">
+      <li><a href="/Webseite/index.html">Start</a></li>
+      <li><a href="/Webseite/pages/technologie.html" class="active">Technologie</a></li>
+      <li><a href="/Webseite/pages/ueber-uns.html">Über uns</a></li>
+      <li><a href="/Webseite/pages/kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="/Webseite/pages/kontakt.html" class="nav-cta">Investor Relations</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <p class="section-label">// Technologie</p>
+    <h1>Unsere Methoden im Detail</h1>
+    <p>Zwei Entwicklungspfade, ein gemeinsames Ziel: Energie, die weder das Klima noch künftige Generationen belastet.</p>
+  </div>
+
+  <!-- THORIUM MSR -->
+  <section>
+    <div class="tech-intro-grid">
+      <div>
+        <p class="section-label">// Pfad 01 — Kurzfristig</p>
+        <h2 class="section-title">Thorium-Flüssigsalzreaktor</h2>
+        <p class="section-body">Der KERN-1 MSR (Molten Salt Reactor) ist unser primäres Entwicklungsprojekt. Er basiert auf einem Konzept, das in den 1960er Jahren am Oak Ridge National Laboratory erprobt, aber durch die Politik des Kalten Krieges zugunsten plutoniumerzeugender Reaktoren aufgegeben wurde. Wir holen dieses Versprechen ein.</p>
+
+        <ul class="feature-list">
+          <li><strong>Flüssiger Brennstoff:</strong> Thoriumfluorid ist direkt im Salzkühlmittel gelöst. Kein Brennstab, der zerstört werden kann.</li>
+          <li><strong>Passiver Sicherheits-Freeze-Plug:</strong> Ein elektrisch gekühlter Stopfen aus erstarrtem Salz hält den Reaktor in Betrieb. Bei Stromausfall schmilzt er — der Brennstoff fließt schwerkraftbedingt in unterkritische Behälter.</li>
+          <li><strong>Atmosphärendruck:</strong> Anders als LWRs arbeitet der MSR nahe Atmosphärendruck. Kein Risiko für Druckexplosionen — keine meterdicken Sicherheitsbehälter nötig.</li>
+          <li><strong>Kontinuierliche Aufbereitung:</strong> Gasförmige Spaltprodukte werden online aus dem Salzkreislauf entfernt. Der Reaktor läuft wartungsfrei über Monate.</li>
+          <li><strong>Thorium-Brutreaktor:</strong> Th-232 wird im Kern zu U-233 transmutiert. Mehr Brennstoff entsteht als verbraucht wird — ein nahezu geschlossener Kreislauf.</li>
+        </ul>
+      </div>
+
+      <div class="thorium-visual">
+        <svg class="thorium-diagram" viewBox="0 0 400 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background rect -->
+          <rect width="400" height="420" fill="#0D0F0E"/>
+
+          <!-- Reactor vessel -->
+          <rect x="140" y="60" width="120" height="160" rx="4" stroke="rgba(247,247,245,0.2)" stroke-width="1.5" fill="rgba(247,247,245,0.02)"/>
+
+          <!-- Salt flow arrows (left loop) -->
+          <path d="M140 100 Q60 100 60 200 Q60 300 140 300" stroke="rgba(232,96,28,0.4)" stroke-width="1.5" stroke-dasharray="6 3" fill="none"/>
+          <polygon points="135,295 140,305 145,295" fill="rgba(232,96,28,0.5)"/>
+
+          <!-- Salt flow arrows (right loop — heat exchanger) -->
+          <path d="M260 100 Q340 100 340 200 Q340 300 260 300" stroke="rgba(42,74,107,0.5)" stroke-width="1.5" stroke-dasharray="6 3" fill="none"/>
+          <polygon points="255,295 260,305 265,295" fill="rgba(42,74,107,0.6)"/>
+
+          <!-- Reactor core glow -->
+          <ellipse cx="200" cy="140" rx="38" ry="38" fill="rgba(232,96,28,0.15)"/>
+          <ellipse cx="200" cy="140" rx="24" ry="24" fill="rgba(232,96,28,0.25)"/>
+          <ellipse cx="200" cy="140" rx="12" ry="12" fill="rgba(232,96,28,0.8)"/>
+
+          <!-- Freeze plug -->
+          <rect x="189" y="205" width="22" height="14" rx="2" fill="rgba(247,247,245,0.08)" stroke="rgba(247,247,245,0.25)" stroke-width="1"/>
+          <text x="200" y="215" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="rgba(232,96,28,0.8)">PLUG</text>
+
+          <!-- Drain tank -->
+          <rect x="163" y="340" width="74" height="50" rx="3" stroke="rgba(247,247,245,0.15)" stroke-width="1.5" fill="rgba(247,247,245,0.02)"/>
+          <line x1="200" y1="220" x2="200" y2="340" stroke="rgba(247,247,245,0.1)" stroke-width="1" stroke-dasharray="4 3"/>
+
+          <!-- Heat exchanger box -->
+          <rect x="310" y="165" width="50" height="70" rx="3" stroke="rgba(42,74,107,0.5)" stroke-width="1.5" fill="rgba(42,74,107,0.06)"/>
+
+          <!-- Generator icon -->
+          <circle cx="335" cy="380" r="22" stroke="rgba(247,247,245,0.2)" stroke-width="1.5" fill="rgba(247,247,245,0.02)"/>
+          <text x="335" y="384" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="rgba(232,96,28,0.8)">~</text>
+          <line x1="335" y1="310" x2="335" y2="358" stroke="rgba(42,74,107,0.4)" stroke-width="1.5"/>
+
+          <!-- Labels -->
+          <text x="200" y="52" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(247,247,245,0.5)" letter-spacing="2">REAKTORKERN</text>
+          <text x="58" y="215" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(232,96,28,0.6)" transform="rotate(-90 58 215)">PRIMÄRKREIS</text>
+          <text x="342" y="215" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(42,74,107,0.8)" transform="rotate(90 342 215)">SEKUNDÄR</text>
+          <text x="200" y="336" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(247,247,245,0.35)">FREEZE PLUG</text>
+          <text x="200" y="371" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(247,247,245,0.35)">ABLAUFTANK</text>
+          <text x="335" y="412" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(247,247,245,0.35)">GENERATOR</text>
+          <text x="335" y="160" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(42,74,107,0.8)">WÄRME-</text>
+          <text x="335" y="170" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(42,74,107,0.8)">TAUSCHER</text>
+
+          <!-- Th-232 arrow in -->
+          <path d="M100 60 L155 60 L155 80" stroke="rgba(232,96,28,0.3)" stroke-width="1" fill="none"/>
+          <polygon points="150,76 155,85 160,76" fill="rgba(232,96,28,0.4)"/>
+          <text x="70" y="58" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(232,96,28,0.6)">Th-232</text>
+
+          <!-- U-233 label inside -->
+          <text x="200" y="145" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="rgba(247,247,245,0.7)">U-233</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT -->
+  <section style="padding-top: 0;">
+    <div class="highlight-box">
+      <p>Der entscheidende Unterschied zur klassischen Kernspaltung: beim Thorium-MSR kann es <em>physikalisch keine Kernschmelze geben</em>. Bei Überhitzung dehnt sich die Salzschmelze aus — die Kettenreaktion verlangsamt sich von selbst. Das ist kein Sicherheitssystem. Es ist ein Naturgesetz.</p>
+    </div>
+  </section>
+
+  <!-- FUSION -->
+  <section style="border-top: 1px solid rgba(247,247,245,0.08);">
+    <p class="section-label">// Pfad 02 — Langfristig</p>
+    <h2 class="section-title">Kompakt-Fusion: Das KERN-F Programm</h2>
+    <p class="section-body">Neben dem MSR verfolgen wir mit dem KERN-F-Team einen langfristigen Fusionspfad. Nicht als Ablenkung — als strategische Absicherung für eine Welt jenseits aller Spaltung.</p>
+
+    <ul class="feature-list" style="margin-top: 2.5rem; max-width: 700px;">
+      <li><strong>Hochtemperatur-Supraleiter (HTS):</strong> Neue REBCO-Bandleiter ermöglichen Magnetfelder von 20+ Tesla in einer kompakten Geometrie. Das hält das Plasma stabil bei einem Bruchteil der Baugröße klassischer Tokamaks.</li>
+      <li><strong>Deuterium-Tritium-Brennstoff:</strong> Deuterium lässt sich aus Meerwasser gewinnen. Tritium wird im Reaktor selbst aus Lithium-6 erbrütet — Brennstoffversorgung ist kein limitierender Faktor.</li>
+      <li><strong>Direkter Wärmeauskopplung:</strong> Unser Design leitet Fusionswärme direkt in einen Salzkreislauf — identisch mit dem MSR. Synergien in der Fertigungskette reduzieren Entwicklungskosten beider Programme.</li>
+      <li><strong>Zielgröße 200 MW:</strong> Statt eines gigantischen ITER-ähnlichen Demonstrators streben wir einen modularen Reaktor an, der in bestehende Industrieparks integriert werden kann.</li>
+      <li><strong>Kein langlebiger Abfall:</strong> Fusionsprodukte sind Helium und kurzzeitig aktiviertes Strukturmaterial — kein langlebiges nukleares Erbe.</li>
+    </ul>
+  </section>
+
+  <!-- ROADMAP -->
+  <section style="border-top: 1px solid rgba(247,247,245,0.08);">
+    <p class="section-label">// Entwicklungs-Roadmap</p>
+    <h2 class="section-title">Unsere Meilensteine</h2>
+
+    <div class="roadmap">
+      <div class="roadmap-item active">
+        <div class="roadmap-date">2023 – 2025</div>
+        <h3 class="roadmap-title">Gründung & Grundlagenforschung</h3>
+        <p class="roadmap-body">Aufbau des Berliner Forschungszentrums. Entwicklung korrosionsbeständiger Nickellegierungen für MSR-Bedingungen. Erste Labortests mit Chloridsalz-Simulanten. Seed-Finanzierung gesichert.</p>
+      </div>
+      <div class="roadmap-item active">
+        <div class="roadmap-date">2025 – 2027</div>
+        <h3 class="roadmap-title">Nicht-nuklearer Prototyp (KERN-1 Electric)</h3>
+        <p class="roadmap-body">Aufbau eines 1:10-Modellreaktors mit elektrischer Beheizung (ohne nukleares Material). Validierung aller Fluiddynamik, Materialverhalten und Wärmetauschprozesse. Partner: TU Berlin, KIT Karlsruhe.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-date">2027 – 2030</div>
+        <h3 class="roadmap-title">Nuklearer Demonstrator</h3>
+        <p class="roadmap-body">Bau eines 10 MW thermischen Demonstrators mit echter Brennstoffkomponente. Standort: Genehmigungsverfahren läuft für Industriegelände in Sachsen. Lizenzpartnerschaft mit europäischer Aufsichtsbehörde.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-date">2030 – 2033</div>
+        <h3 class="roadmap-title">Pilotanlage KERN-1 (500 MW)</h3>
+        <p class="roadmap-body">Erster kommerzieller Reaktor. Zielkapazität: 500 MW elektrisch. Anbindung an Industriecluster mit Hochtemperaturwärmebedarf (Zement, Chemie, Stahl). Beginn der Serienplanung.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-date">2035+</div>
+        <h3 class="roadmap-title">Fusion KERN-F Demonstrator</h3>
+        <p class="roadmap-body">Erstes Plasma im KERN-F-Tokamak. Ziel: Q &gt; 1 (mehr Energie raus als rein). Parallel Vorbereitung der kommerziellen Serienproduktion modularer MSR-Einheiten.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="/Webseite/index.html" class="footer-logo">KER<span>N</span></a>
+    <ul class="footer-links">
+      <li><a href="/Webseite/pages/technologie.html">Technologie</a></li>
+      <li><a href="/Webseite/pages/ueber-uns.html">Über uns</a></li>
+      <li><a href="/Webseite/pages/kontakt.html">Kontakt</a></li>
+      <li><a href="#">Impressum</a></li>
+      <li><a href="#">Datenschutz</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 KERN Energy GmbH — Berlin, Deutschland</p>
+  </footer>
+
+  <script src="/Webseite/js/nav.js"></script>
+</body>
+</html>
