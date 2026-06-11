@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — KERN</title>
+  <meta name="description" content="Nehmen Sie Kontakt mit KERN auf — für Investoren, Forschungskooperationen und Presseanfragen." />
+  <link rel="stylesheet" href="/Webseite/css/style.css" />
+</head>
+<body>
+
+  <nav id="main-nav">
+    <a href="/Webseite/index.html" class="nav-logo">KER<span>N</span></a>
+    <ul class="nav-links">
+      <li><a href="/Webseite/index.html">Start</a></li>
+      <li><a href="/Webseite/pages/technologie.html">Technologie</a></li>
+      <li><a href="/Webseite/pages/ueber-uns.html">Über uns</a></li>
+      <li><a href="/Webseite/pages/kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+    <a href="/Webseite/pages/kontakt.html" class="nav-cta">Investor Relations</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">// Kontakt</p>
+    <h1>Sprechen wir.</h1>
+    <p>Ob Investor, Forscher, potenzieller Partner oder neugieriger Mensch — wir freuen uns über jede ernsthafte Anfrage.</p>
+  </div>
+
+  <section>
+    <div class="contact-grid">
+
+      <!-- LEFT: Info -->
+      <div class="contact-info">
+        <p>KERN ist ein junges Unternehmen mit großem Ziel. Wir suchen aktiv Kontakt zu Investoren, wissenschaftlichen Partnern, Ingenieurtalenten und politischen Gesprächspartnern, die die Energiefrage ernstnehmen.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-label">Adresse</div>
+          <div class="contact-detail-value">KERN Energy GmbH<br/>Albert-Einstein-Straße 14<br/>12489 Berlin-Adlershof</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Allgemeine Anfragen</div>
+          <div class="contact-detail-value">hallo@kern-energy.de</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Investor Relations</div>
+          <div class="contact-detail-value">invest@kern-energy.de</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Presse</div>
+          <div class="contact-detail-value">presse@kern-energy.de</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Karriere</div>
+          <div class="contact-detail-value">jobs@kern-energy.de</div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+          <p class="section-label">// Investor Relations</p>
+          <p style="font-size: 0.95rem; color: var(--gray); line-height: 1.75; margin-bottom: 1.2rem;">
+            KERN befindet sich aktuell in der Vorbereitung einer Series-A-Runde. Unser Teaser-Deck und einen vollständigen Datenraum stellen wir qualifizierten Investoren auf Anfrage zur Verfügung.
+          </p>
+          <p style="font-size: 0.95rem; color: var(--gray); line-height: 1.75;">
+            Mindesticketgröße: 500.000 EUR. Wir arbeiten bevorzugt mit Investoren, die tiefes Verständnis für Deep-Tech-Infrastrukturprojekte mitbringen.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div>
+        <p class="section-label" style="margin-bottom: 1.5rem;">// Nachricht senden</p>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Dr. Anna Müller" />
+        </div>
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" placeholder="anna@beispiel.de" />
+        </div>
+        <div class="form-group">
+          <label for="organisation">Organisation</label>
+          <input type="text" id="organisation" name="organisation" placeholder="Universität / Unternehmen / Privat" />
+        </div>
+        <div class="form-group">
+          <label for="betreff">Betreff</label>
+          <select id="betreff" name="betreff">
+            <option value="" disabled selected>Bitte wählen</option>
+            <option value="investor">Investor Relations</option>
+            <option value="forschung">Forschungskooperation</option>
+            <option value="karriere">Karriere / Bewerbung</option>
+            <option value="presse">Presseanfrage</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nachricht">Nachricht</label>
+          <textarea id="nachricht" name="nachricht" rows="6" placeholder="Ihre Nachricht an uns..."></textarea>
+        </div>
+
+        <button type="button" class="btn-primary" style="border: none; cursor: pointer; width: 100%; text-align: center;" onclick="handleSubmit()">
+          Nachricht senden
+        </button>
+
+        <p style="font-size: 0.78rem; color: var(--gray); margin-top: 1rem; line-height: 1.6;">
+          Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu. Wir antworten in der Regel innerhalb von 3 Werktagen.
+        </p>
+
+        <!-- Success message (hidden by default) -->
+        <div id="success-msg" style="display: none; margin-top: 1.5rem; padding: 1.2rem 1.5rem; background: rgba(232,96,28,0.1); border: 1px solid rgba(232,96,28,0.3);">
+          <p style="font-family: var(--font-display); font-size: 0.95rem; color: var(--white);">Danke für Ihre Nachricht. Wir melden uns bald.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CAREERS TEASER -->
+  <section style="border-top: 1px solid rgba(247,247,245,0.08);">
+    <p class="section-label">// Karriere</p>
+    <h2 class="section-title">Wir wachsen</h2>
+    <p class="section-body" style="margin-bottom: 3rem;">KERN sucht Menschen, die Lust haben, an einem der wichtigsten Ingenieurprobleme unserer Zeit zu arbeiten. Akademische Brillanz ist willkommen — aber nicht hinreichend. Wir suchen Leute, die etwas bauen wollen.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid rgba(247,247,245,0.08); gap: 2rem;">
+        <div>
+          <p style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Senior Reaktorphysiker / Neutronik (m/w/d)</p>
+          <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--orange); letter-spacing: 0.1em;">Berlin · Vollzeit · ab sofort</p>
+        </div>
+        <a href="mailto:jobs@kern-energy.de?subject=Bewerbung: Senior Reaktorphysiker" class="btn-secondary" style="white-space: nowrap;">Bewerben</a>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid rgba(247,247,245,0.08); gap: 2rem;">
+        <div>
+          <p style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Werkstoffwissenschaftler — Hochtemperaturkorrosion (m/w/d)</p>
+          <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--orange); letter-spacing: 0.1em;">Berlin · Vollzeit · ab sofort</p>
+        </div>
+        <a href="mailto:jobs@kern-energy.de?subject=Bewerbung: Werkstoffwissenschaftler" class="btn-secondary" style="white-space: nowrap;">Bewerben</a>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid rgba(247,247,245,0.08); gap: 2rem;">
+        <div>
+          <p style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Verfahrenstechniker — Salzchemie & Prozesstechnik (m/w/d)</p>
+          <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--orange); letter-spacing: 0.1em;">Karlsruhe · Vollzeit · ab sofort</p>
+        </div>
+        <a href="mailto:jobs@kern-energy.de?subject=Bewerbung: Verfahrenstechniker" class="btn-secondary" style="white-space: nowrap;">Bewerben</a>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 1.5rem 0; gap: 2rem;">
+        <div>
+          <p style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Doktorandenprogramm 2025 — Mehrere Stellen</p>
+          <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--orange); letter-spacing: 0.1em;">Berlin / Karlsruhe · Promotion · Bewerbungsschluss 31.10.2025</p>
+        </div>
+        <a href="mailto:jobs@kern-energy.de?subject=Bewerbung: Doktorandenprogramm" class="btn-secondary" style="white-space: nowrap;">Bewerben</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="/Webseite/index.html" class="footer-logo">KER<span>N</span></a>
+    <ul class="footer-links">
+      <li><a href="/Webseite/pages/technologie.html">Technologie</a></li>
+      <li><a href="/Webseite/pages/ueber-uns.html">Über uns</a></li>
+      <li><a href="/Webseite/pages/kontakt.html">Kontakt</a></li>
+      <li><a href="#">Impressum</a></li>
+      <li><a href="#">Datenschutz</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 KERN Energy GmbH — Berlin, Deutschland</p>
+  </footer>
+
+  <script src="/Webseite/js/nav.js"></script>
+  <script>
+    function handleSubmit() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const msg = document.getElementById('nachricht').value;
+      if (!name || !email || !msg) {
+        alert('Bitte füllen Sie mindestens Name, E-Mail und Nachricht aus.');
+        return;
+      }
+      document.getElementById('success-msg').style.display = 'block';
+      document.querySelector('button[onclick]').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
