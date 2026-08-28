@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Getränkekarte</title>
+<style>
+:root{--bg:#f7f4ed;--card:#fff;--ink:#252525;--accent:#7b9b63;--accent2:#d9a441}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:42px 20px 28px;text-align:center;background:linear-gradient(135deg,#dfead5,#fff7e5)}
+h1{margin:0;font-size:42px} header p{margin:8px 0 0;color:#666}
+.barkeeper-badge{display:inline-block;margin-top:16px;padding:10px 18px;background:var(--accent);color:#fff;border-radius:30px;font-weight:700;font-size:14.5px;box-shadow:0 4px 14px #0002}
+main{max-width:1050px;margin:auto;padding:22px 16px 50px}
+h2{margin:30px 0 14px;font-size:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 4px 18px #0000000b;border:1px solid #eee}
+.card b{font-size:18px}.card span{display:block;color:#777;margin-top:5px;font-size:14px}
+button{border:0;border-radius:12px;padding:10px 13px;background:#edf3e8;cursor:pointer;font-weight:600}
+button:hover{background:#dfead5}.mix{background:#fff;border-radius:18px;padding:20px;box-shadow:0 4px 18px #0000000b}
+label{display:inline-flex;align-items:center;gap:7px;margin:6px 12px 6px 0;background:#f6f6f3;padding:9px 11px;border-radius:12px}
+select{padding:10px;border-radius:10px;border:1px solid #ccc;margin:4px 0 12px}
+#result{margin-top:15px;padding:14px;background:#f2f6ee;border-radius:12px;font-weight:600}
+.note{font-size:13px;color:#777;margin-top:18px}
+</style>
+</head>
+<body>
+<header><h1>🍹 Getränkekarte</h1><p>Klassiker, Mixgetränke & eigene Kreationen</p><div class="barkeeper-badge">🧠 Erfahrener Barkeeper vor Ort – Wünsche &amp; Eigenkreationen jederzeit willkommen!</div></header>
+<main>
+<h2>🍸 Klassiker</h2>
+<div class="grid" id="drinks"></div>
+
+<h2>🥤 Alkoholfreie Getränke</h2>
+<div class="grid" id="soft"></div>
+
+<h2>✨ Eigene Wünsche</h2>
+<p style="color:#5c7a49;font-weight:600;margin:-6px 0 4px">Steht nicht auf der Karte? Einfach an der Bar sagen, was du dir wünschst – wird vor Ort frisch für dich gemixt.</p>
+</main>
+<script>
+const classics=[
+["Hugo","Prosecco · Holunder · Minze · Limette"],
+["Virgin Mojito","Limette · Minze · brauner Zucker · Sprite · Eis"],
+["Aperol Spritz","Aperol · Prosecco · Soda · Eis"],
+["Prosecco","Pur · gut gekühlt"],
+["Weißwein","Pur · gut gekühlt"],
+["Rotwein","Pur"],
+["Wein-Schorle weiß","Weißwein · Wasser"],
+["Wein-Schorle rot","Rotwein · Wasser"],
+["Aperol Tonic","Aperol · Tonic Water · Eis"],
+["Aperol Ginger","Aperol · Ginger Ale · Eis"],
+["Hugo alkoholfrei","Ginger Ale · Minze · Limette · Eis"],
+["Traubenspritz","Traubensaft · Wasser · Limette · Eis"],
+["Apfelspritz","Apfelsaft · Wasser · Eis"]
+];
+const soft=[
+["Cola","Klassisch · gekühlt"],["Fanta","Klassisch · gekühlt"],["Sprite","Klassisch · gekühlt"],
+["Wasser","Still"],["Apfelsaft","Pur"],["Traubensaft","Pur"],["Ginger Ale","Gekühlt"],["Tonic Water","Gekühlt"]
+];
+function cards(list,id){document.getElementById(id).innerHTML=list.map(([a,b])=>`<div class="card"><b>${a}</b><span>${b}</span></div>`).join("")}
+cards(classics,"drinks"); cards(soft,"soft");
+
+</script>
+</body>
+</html>
